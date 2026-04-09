@@ -12,19 +12,6 @@ export const styles = StyleSheet.create({
     ...StyleSheet.absoluteFillObject,
     opacity: 0.4,
   },
-  gridLine: {
-    position: 'absolute',
-    top: '18%',
-    left: '-25%',
-    width: '150%',
-    height: 1,
-    backgroundColor: 'rgba(245, 4, 4, 0.22)',
-    transform: [{ rotate: '-14deg' }],
-  },
-  gridLineOffset: {
-    top: '62%',
-    left: '-10%',
-  },
   backGlow: {
     position: 'absolute',
     borderRadius: 999,
@@ -39,7 +26,7 @@ export const styles = StyleSheet.create({
     borderRadius: 999,
     backgroundColor: THEME.backgroundDark,
     borderWidth: 1,
-    borderColor: THEME.primaryGreen,
+    borderColor: THEME.primaryGreen2,
   },
   replayButtonText: {
     color: THEME.textGray2,
@@ -107,7 +94,6 @@ export const styles = StyleSheet.create({
     alignItems: 'center',
     borderWidth: 1,
     borderColor: THEME.backgroundLight,
-    backgroundColor: 'rgba(169, 249, 158, 0.16)',
   },
   scoreLabel: {
     color: THEME.textGray,
@@ -160,10 +146,10 @@ export const styles = StyleSheet.create({
     marginTop: 20,
     paddingHorizontal: 22,
     paddingVertical: 18,
-    borderRadius: 22,
+    borderRadius: 10,
     backgroundColor: THEME.backgroundDark,
     borderWidth: 1,
-    borderColor: 'rgba(169, 249, 158, 0.72)',
+    borderColor: THEME.primaryGreen2,
   },
   rankLabel: {
     color: THEME.textGray,
@@ -189,15 +175,19 @@ export const styles = StyleSheet.create({
     marginTop: 22,
   },
   shareHitbox: {
-    borderRadius: 22,
+    borderRadius: 10,
     overflow: 'hidden',
   },
   shareButton: {
     paddingVertical: 18,
-    borderRadius: 22,
+    borderRadius: 10,
     alignItems: 'center',
     justifyContent: 'center',
     overflow: 'hidden',
+    backgroundColor: THEME.backgroundDark,
+    borderWidth: 2,
+    borderBottomWidth: 8,
+    borderColor: THEME.primaryGreen2,
   },
   shimmer: {
     position: 'absolute',
@@ -206,9 +196,10 @@ export const styles = StyleSheet.create({
     width: 66,
   },
   shareText: {
-    color: THEME.textDark,
-    fontSize: 18,
+    color: THEME.textLight,
+    fontSize: 16,
     fontFamily: THEME.fontMontserrat,
-    letterSpacing: 0.2,
+    letterSpacing: 1.5,
+    textTransform: 'uppercase',
   },
 });

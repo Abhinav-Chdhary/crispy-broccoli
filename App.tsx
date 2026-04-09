@@ -388,7 +388,7 @@ export default function App() {
             height: width * 0.72,
             top: height * 0.06,
             left: -width * 0.12,
-            backgroundColor: 'rgba(169, 249, 158, 0.3)',
+            backgroundColor: `${THEME.primaryGreen2}4d`,
           },
         ]}
       />
@@ -403,8 +403,7 @@ export default function App() {
             height: width * 0.8,
             bottom: -width * 0.25,
             right: -width * 0.1,
-            backgroundColor: 'rgba(177, 250, 99, 0.22)',
-            opacity: 0.72,
+            backgroundColor: `${THEME.primaryPurple}4d`,
             transform: [{ rotate: '18deg' }],
           },
         ]}
@@ -423,7 +422,7 @@ export default function App() {
         {/* Title and Subtitle Block */}
         <View style={styles.headerBlock}>
           <Text style={styles.kicker}>MATIKS DUEL COMPLETE</Text>
-          <Text style={[styles.title, compactLayout && styles.titleCompact]}>Victory Locked In</Text>
+          <Text style={[styles.title, compactLayout && styles.titleCompact]}>VICTORY!</Text>
           <Text style={[styles.subtitle, compactLayout && styles.subtitleCompact]}>
             Your last answer closed the gap and flipped the board in the final seconds.
           </Text>
@@ -469,12 +468,7 @@ export default function App() {
         {/* Share Result Button with shimmer effect */}
         <Animated.View style={[styles.shareWrap, buttonStyle]}>
           <Pressable onPress={handleShare} style={styles.shareHitbox}>
-            <LinearGradient
-              colors={[THEME.primaryGreen, THEME.primaryGreen2]}
-              start={{ x: 0, y: 0 }}
-              end={{ x: 1, y: 1 }}
-              style={styles.shareButton}
-            >
+            <View style={styles.shareButton}>
               {/* Shimmer Overlay - Moves horizontally across the button */}
               <AnimatedLinearGradient
                 colors={['transparent', THEME.backgroundLight, 'transparent']}
@@ -484,7 +478,7 @@ export default function App() {
                 style={[styles.shimmer, shimmerStyle]}
               />
               <Text style={styles.shareText}>Share Result</Text>
-            </LinearGradient>
+            </View>
           </Pressable>
         </Animated.View>
       </Animated.View>
